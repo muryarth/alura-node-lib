@@ -1,0 +1,24 @@
+{
+  "name": "alura-node-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muryarth/alura-node-lib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muryarth/alura-node-lib/issues"
+  },
+  "homepage": "https://github.com/muryarth/alura-node-lib#readme",
+  "dependencies": {
+    "chalk": "^5.2.0"
+  }
+}
