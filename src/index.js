@@ -7,7 +7,7 @@ import chalk from 'chalk';
 //     // Função callback(erro, retorno)
 //     fs.readFile(path, encoding, (error, response) => { // O "_" é um padrão utilizado para que o JavaScript pule o parâmetro
 //         if (error) {
-//             TreatError(error);
+//             HandleErrors(error);
 //         }
 //         console.log(chalk.green(response));
 //     })
@@ -21,11 +21,12 @@ import chalk from 'chalk';
 //             const texto = response;
 //             console.log(chalk.green(texto));
 //         })
-//         .catch(TreatError);
+//         .catch(HandleErrors);
 // }
 
 // Código para tratamento de erro
-function TreatError(error) {
+function HandleErrors(error) {
+    // console.log("Deu ruim!");
     console.log(error);
     throw new Error(chalk.red(error.code, 'Não há arquivo no diretório.'));
 }
@@ -47,7 +48,7 @@ async function ReadFile(path) {
         return GetLinksFromText(response);
     }
     catch (error) {
-        TreatError(error);
+        HandleErrors(error);
     }
     // Finally executa sempre ao final da execução do try catch, independente do resultado encontrado
     // finally {
@@ -55,4 +56,5 @@ async function ReadFile(path) {
     // }
 }
 
+// Função sendo exportada para o arquivo cli.js
 export default ReadFile;
